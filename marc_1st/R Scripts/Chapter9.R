@@ -1,0 +1,7 @@
+readmission.id <- data.frame(readmission=factor(c("1","1","0","0")), eservices=factor(c("1","0","1","0")), count=c(118,2,139,17))
+str(readmission.id)
+readmission.logit <-glm(readmission ~ eservices, weights=count, data=readmission.id, family="binomial")
+summary(readmission.logit)
+exp(coef(readmission.logit)) 
+confint.default(readmission.logit)
+exp(confint.default(readmission.logit))

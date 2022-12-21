@@ -1,0 +1,14 @@
+attach(EP_Attest)
+table(MeaningfulUse)
+table(Size)
+table(Geography)
+tapply(group_practice_PAC_id,list(MeaningfulUse,Size),length)
+tapply(group_practice_PAC_id,list(MeaningfulUse,Geography),length)
+chisq.table2<-tapply(group_practice_PAC_id,list(MeaningfulUse,Size),length)
+chisq.test(chisq.table2)
+chisq.test(chisq.table2)$expected
+chisq.test(chisq.table2)$residuals
+chisq.table1<-tapply(group_practice_PAC_id,list(MeaningfulUse,Geography),length)
+chisq.test(chisq.table1)
+chisq.test(chisq.table1)$expected
+chisq.test(chisq.table1)$residuals

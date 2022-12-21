@@ -1,0 +1,9 @@
+SELECT 
+    population_size,
+    poverty_rate,
+    mammogram_rate,
+    uninsured_rate,
+    prim_care_phys_rate,
+    community_health_center_ind    
+FROM
+    measures_of_birth_and_death;
